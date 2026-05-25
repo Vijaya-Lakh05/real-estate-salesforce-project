@@ -10,8 +10,20 @@ Features:
 - Vendor Assignment
 - Batch & Scheduler Jobs
 - Dashboard & Reports
-
-Test Coverage: 91%
+- Test Coverage: 91%
+Architecture diagram (text format)
+- Features list
+- Tech stack
+- Screenshots section
+- Test coverage (91%)
+- Deployment steps  
+- Architecture diagram (text format)
+- Features list
+- Tech stack
+- Screenshots section
+- Test coverage (91%)
+- Deployment steps  
+  
 
 Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
