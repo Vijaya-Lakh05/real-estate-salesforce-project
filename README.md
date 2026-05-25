@@ -1,8 +1,17 @@
-# Salesforce DX Project: Next Steps
+# Real Estate Salesforce Project
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Built using Salesforce (Apex + LWC).
 
-## How Do You Plan to Deploy Your Changes?
+Features:
+- Property Management
+- Tenant Management
+- Lease Management
+- Maintenance Requests
+- Vendor Assignment
+- Batch & Scheduler Jobs
+- Dashboard & Reports
+
+Test Coverage: 91%
 
 Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
@@ -16,3 +25,6 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+=======
+# real-estate-salesforce-project
+>>>>>>> 9aab9a9afeee0b1835adb5d5c224a51f20397a73
