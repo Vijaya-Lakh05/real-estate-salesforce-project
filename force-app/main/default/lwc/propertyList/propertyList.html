@@ -1,0 +1,96 @@
+<template>
+    <lightning-card title="Properties">
+
+        <template if:true={properties}>
+
+            <template for:each={properties} for:item="prop">
+
+                <div key={prop.Id} class="slds-p-around_small">
+
+                    <p><strong>Name:</strong> {prop.Name}</p>
+                    <p><strong>City:</strong> {prop.City__c}</p>
+                    <p><strong>Rent:</strong> {prop.Rent__c}</p>
+                    <p><strong>Status:</strong> {prop.Status__c}</p>
+
+                    <hr/>
+
+                </div>
+
+            </template>
+
+        </template>
+
+        <!-- Pagination Controls -->
+        <div class="slds-p-around_small slds-align_absolute-center">
+
+            <lightning-button 
+    label="Previous" 
+    onclick={handlePrevious}
+    disabled={isFirstPage}>
+</lightning-button>
+
+<span class="slds-p-horizontal_medium">
+    Page {pageNumber} of {totalPages}
+</span>
+
+<lightning-button 
+    label="Next" 
+    onclick={handleNext}
+    disabled={isLastPage}>
+</lightning-button>
+
+        </div>
+
+    </lightning-card>
+    <lightning-card title="Property Filters">
+
+    <div class="slds-p-around_small slds-grid slds-gutters">
+
+        <!-- Min Price -->
+        <lightning-input
+            type="number"
+            label="Min Price"
+            onchange={handleMinPrice}>
+        </lightning-input>
+
+        <!-- Max Price -->
+        <lightning-input
+            type="number"
+            label="Max Price"
+            onchange={handleMaxPrice}>
+        </lightning-input>
+
+        <lightning-input
+        type="number"
+        label="Distance (KM)"
+        value={distance}
+        onchange={handleDistance}>
+</lightning-input>
+
+        <!-- Status -->
+        <lightning-combobox
+            label="Status"
+            value={status}
+            options={statusOptions}
+            onchange={handleStatus}>
+        </lightning-combobox>
+
+        <!-- Furnishing -->
+        <lightning-combobox
+            label="Furnishing"
+            value={furnishing}
+            options={furnishingOptions}
+            onchange={handleFurnishing}>
+        </lightning-combobox>
+
+    </div>
+
+    <!-- Apply Button -->
+    <lightning-button
+    label="Apply Filters"
+    variant="brand"
+    onclick={handleFilterChange}>
+</lightning-button>
+
+</lightning-card>
+</template>

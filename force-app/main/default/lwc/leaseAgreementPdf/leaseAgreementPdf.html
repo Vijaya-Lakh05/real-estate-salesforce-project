@@ -1,0 +1,24 @@
+<template>
+
+    <lightning-card title="Lease Agreement Actions">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-button
+                label="Download PDF"
+                variant="brand"
+                onclick={downloadPdf}>
+            </lightning-button>
+
+        </div>
+
+           <lightning-button
+               label="Send Email"
+               variant="success"
+               onclick={sendEmail}
+               class="slds-m-left_small">
+            </lightning-button>
+
+    </lightning-card>
+
+</template>

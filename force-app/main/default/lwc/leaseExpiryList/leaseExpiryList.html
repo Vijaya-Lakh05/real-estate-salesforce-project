@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Lease Expiring In 30 Days">
+
+        <template if:true={leases.length}>
+
+            <template for:each={leases} for:item="lease">
+
+                <div key={lease.Id} class="slds-p-around_small">
+
+                    <p>
+                        <strong>Property:</strong>
+                        {lease.PropertyName}
+                    </p>
+
+                    <p>
+                        <strong>End Date:</strong>
+                        {lease.EndDate}
+                    </p>
+
+                </div>
+
+            </template>
+
+        </template>
+
+        <template if:false={leases.length}>
+            <p>No leases found</p>
+        </template>
+
+    </lightning-card>
+</template>

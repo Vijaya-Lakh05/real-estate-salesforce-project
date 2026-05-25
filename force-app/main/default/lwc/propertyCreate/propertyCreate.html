@@ -1,0 +1,99 @@
+<template>
+    <lightning-card title="Create Property">
+
+        <div class="slds-p-around_medium">
+
+            <!-- Property Name -->
+            <lightning-input
+                label="Property Name"
+                value={propertyName}
+                onchange={handleName}>
+            </lightning-input>
+
+            <!-- Address -->
+            <lightning-input
+                label="Address"
+                value={address}
+                onchange={handleAddress}>
+            </lightning-input>
+
+            <!-- City -->
+            <lightning-input
+                label="City"
+                value={city}
+                onchange={handleCity}>
+            </lightning-input>
+
+            <!-- State -->
+            <lightning-input
+                label="State"
+                value={state}
+                onchange={handleState}>
+            </lightning-input>
+
+            <!-- Postal Code -->
+            <lightning-input
+                label="Postal Code"
+                value={postalCode}
+                onchange={handlePostalCode}>
+            </lightning-input>
+
+            <!-- Country -->
+            <lightning-input
+                label="Country"
+                value={country}
+                onchange={handleCountry}>
+            </lightning-input>
+
+            <!-- Rent -->
+            <lightning-input
+                type="number"
+                label="Rent"
+                value={rent}
+                onchange={handleRent}>
+            </lightning-input>
+
+            <!-- Type -->
+            <lightning-combobox
+                label="Type"
+                value={type}
+                options={typeOptions}
+                onchange={handleType}>
+            </lightning-combobox>
+
+            <!-- Status -->
+            <lightning-combobox
+                label="Status"
+                value={status}
+                options={statusOptions}
+                onchange={handleStatus}>
+            </lightning-combobox>
+
+            <br/>
+
+            <!-- Image Upload -->
+            <lightning-file-upload
+                label="Upload Property Image"
+                name="fileUploader"
+                accept=".jpg,.jpeg,.png"
+                record-id={tempRecordId}
+                onuploadfinished={handleUploadFinished}>
+            </lightning-file-upload>
+
+            <template if:true={imageUploaded}>
+                <p>✅ Image uploaded successfully</p>
+            </template>
+
+            <br/>
+
+            <!-- Create Button -->
+            <lightning-button
+                variant="brand"
+                label="Create Property"
+                onclick={handleSave}>
+            </lightning-button>
+
+        </div>
+
+    </lightning-card>
+</template>
